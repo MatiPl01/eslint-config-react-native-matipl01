@@ -1,5 +1,5 @@
 {
-  "name": "@matipl01/eslint-config-react-native",
+  "name": "eslint-config-react-native-matipl01",
   "description": "eslint config for React Native projects",
   "version": "1.0.0",
   "author": "Mateusz Łopaciński <lop.mateusz.2001@gmail.com>",
