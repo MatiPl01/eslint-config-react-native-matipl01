@@ -1,0 +1,22 @@
+{
+  "name": "@MatiPl01/eslint-config-react-native",
+  "version": "1.0.0",
+  "description": "eslint config for React Native projects",
+  "main": "index.js",
+  "repository": "https://github.com/MatiPl01/eslint-config-react-native",
+  "author": "Mateusz Łopaciński <lop.mateusz.2001@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-markdown": "^3.0.1",
+    "eslint-plugin-no-relative-import-paths": "^1.5.2",
+    "eslint-plugin-perfectionist": "^2.1.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "prettier": "^3.0.3"
+  }
+}
