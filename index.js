@@ -33,6 +33,9 @@ module.exports = {
     ecmaFeatures: {},
   },
   settings: {
+    react: {
+      version: "detect",
+    },
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"],
     },
@@ -231,7 +234,13 @@ module.exports = {
     ],
     "react/jsx-curly-brace-presence": ["error", "never"],
     "react/prop-types": "off",
-    "@typescript-eslint/prefer-nullish-coalescing": ["error"],
+    "@typescript-eslint/prefer-nullish-coalescing": [
+      "error",
+      {
+        ignoreConditionalTests: true,
+        ignoreMixedLogicalExpressions: true,
+      },
+    ],
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "perfectionist/sort-imports": "off",

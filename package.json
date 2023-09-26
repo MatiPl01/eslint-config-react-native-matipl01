@@ -14,7 +14,8 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
-    "eslint-plugin-unused-imports": "^3.0.0"
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "prettier": "^3.0.3"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
@@ -39,7 +40,7 @@
   "main": "index.js",
   "peerDependencies": {
     "eslint": ">=6.0.0",
-    "typescript": ">=3.0.0"
+    "typescript": ">=3.7.0"
   },
   "publishConfig": {
     "access": "public"
