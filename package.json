@@ -28,7 +28,7 @@
     "semantic-release-cli": "^5.4.4",
     "syncpack": "^11.2.1"
   },
-  "homepage": "https://github.com/MatiPl01/eslint-config-react-native#readme",
+  "homepage": "https://github.com/MatiPl01/eslint-config-react-native-matipl01#readme",
   "license": "MIT",
   "lint-staged": {
     "package.json": [
@@ -43,7 +43,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": "https://github.com/MatiPl01/eslint-config-react-native",
+  "repository": "https://github.com/MatiPl01/eslint-config-react-native-matipl01",
   "scripts": {
     "prepare": "husky install"
   }
