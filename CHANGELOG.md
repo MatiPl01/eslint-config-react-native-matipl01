@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v1.0.0...v1.0.1) (2023-09-26)
+
+
+### Bug Fixes
+
+* Add missing dependencies ([#4](https://github.com/MatiPl01/eslint-config-react-native-matipl01/issues/4)) ([264367a](https://github.com/MatiPl01/eslint-config-react-native-matipl01/commit/264367aa3adf83d3e396cbfdada71baa38c5b64b))
+
 # 1.0.0 (2023-09-26)
 
 
