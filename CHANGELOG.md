@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v1.0.1...v1.0.2) (2023-09-26)
+
+
+### Bug Fixes
+
+* Prettier and eslint-plugin-prettier compatibility issue ([#5](https://github.com/MatiPl01/eslint-config-react-native-matipl01/issues/5)) ([04624c9](https://github.com/MatiPl01/eslint-config-react-native-matipl01/commit/04624c9fc755e2aa7bd51f45f61e8bb9aa42b848))
+
 ## [1.0.1](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v1.0.0...v1.0.1) (2023-09-26)
 
 
