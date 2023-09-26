@@ -1,7 +1,6 @@
 # eslint-config-react-native-matipl01
 
-![release workflow](https://github.com/MatiPl01/explint-plugin-react-native-matipl01/actions/workflows/release/badge.svg)
-[![Node version](https://img.shields.io/node/v/eslint-config-react-native-matipl01.svg?style=flat)](https://nodejs.org/download/)
+[![npm version](https://badge.fury.io/js/eslint-config-react-native-matipl01.svg)](https://badge.fury.io/js/eslint-config-react-native-matipl01)
 
 ESLint and TypeScript configuration used in my React Native projects.
 

@@ -1,7 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "MatiPl01's config",
-  "_version": "1.0.0",
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
