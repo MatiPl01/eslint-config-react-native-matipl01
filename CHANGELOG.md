@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v1.0.2...v1.0.3) (2023-10-09)
+
+
+### Bug Fixes
+
+* jsx property in tsconfig ([#10](https://github.com/MatiPl01/eslint-config-react-native-matipl01/issues/10)) ([dfad1f3](https://github.com/MatiPl01/eslint-config-react-native-matipl01/commit/dfad1f379b96bdab3c4ccd0c9c65890c679b3cac))
+
 ## [1.0.2](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v1.0.1...v1.0.2) (2023-09-26)
 
 

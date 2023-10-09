@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-react-native-matipl01",
   "description": "eslint config for React Native projects",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Mateusz Łopaciński <lop.mateusz.2001@gmail.com>",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.3",
