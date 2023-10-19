@@ -13,6 +13,7 @@
     "eslint-plugin-perfectionist": "^2.1.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-unused-imports": "^3.0.0",
     "prettier": "^3.0.3"
@@ -25,7 +26,7 @@
     "@semantic-release/npm": "^11.0.0",
     "@semantic-release/release-notes-generator": "^12.0.0",
     "husky": "^8.0.0",
-    "lint-staged": "^14.0.1",
+    "lint-staged": "^15.0.1",
     "semantic-release": "^22.0.5",
     "semantic-release-cli": "^5.4.4",
     "syncpack": "^11.2.1"
@@ -35,6 +36,12 @@
   "lint-staged": {
     "package.json": [
       "syncpack format"
+    ],
+    "index.js": [
+      "yarn eslint:rules:sort"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "yarn format:code"
     ]
   },
   "main": "index.js",
@@ -47,6 +54,8 @@
   },
   "repository": "https://github.com/MatiPl01/eslint-config-react-native-matipl01",
   "scripts": {
+    "eslint:rules:sort": "node ./scripts/sort-eslint-rules.js",
+    "format:code": "prettier --write . --ignore-unknown",
     "prepare": "husky install"
   }
 }
