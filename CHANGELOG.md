@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v1.0.3...v1.1.0) (2023-10-19)
+
+
+### Features
+
+* Add hook and type import/export rules ([#20](https://github.com/MatiPl01/eslint-config-react-native-matipl01/issues/20)) ([7c04e62](https://github.com/MatiPl01/eslint-config-react-native-matipl01/commit/7c04e62fb11a748635045186dacf568b1d68147b))
+
 ## [1.0.3](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v1.0.2...v1.0.3) (2023-10-09)
 
 ### Bug Fixes
