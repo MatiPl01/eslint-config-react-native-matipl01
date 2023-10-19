@@ -4,7 +4,6 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "eslint:recommended",
-    "@react-native-community",
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:perfectionist/recommended-natural",
