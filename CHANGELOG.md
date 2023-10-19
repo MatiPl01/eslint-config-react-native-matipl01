@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v2.0.1...v2.0.2) (2023-10-19)
+
+
+### Bug Fixes
+
+* Add missing deps, remove unnecessary extend ([#23](https://github.com/MatiPl01/eslint-config-react-native-matipl01/issues/23)) ([0da5258](https://github.com/MatiPl01/eslint-config-react-native-matipl01/commit/0da5258dd592268e57c57afb0cc3c1c73edde7ad))
+
 ## [2.0.1](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v2.0.0...v2.0.1) (2023-10-19)
 
 
