@@ -3,7 +3,8 @@ module.exports = {
   extends: [
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:react/recommended",
+    "eslint:recommended",
+    "@react-native-community",
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:perfectionist/recommended-natural",
@@ -11,6 +12,8 @@ module.exports = {
   ],
   plugins: [
     "react",
+    "react-native",
+    "react-hooks",
     "@typescript-eslint",
     "import",
     "unused-imports",
@@ -21,7 +24,6 @@ module.exports = {
   ],
   overrides: [
     {
-      // Enable the Markdown processor for all .md files.
       files: ["**/*.md"],
       processor: "markdown/markdown",
     },
@@ -47,6 +49,35 @@ module.exports = {
     },
   },
   rules: {
+    "@typescript-eslint/array-type": [
+      "error",
+      {
+        default: "generic",
+      },
+    ],
+    "@typescript-eslint/consistent-type-exports": "error",
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/naming-convention": [
+      2,
+      {
+        selector: "enumMember",
+        format: ["PascalCase"],
+      },
+    ],
+    "@typescript-eslint/no-floating-promises": [
+      "error",
+      {
+        ignoreVoid: true,
+      },
+    ],
+    "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/prefer-nullish-coalescing": [
+      "error",
+      {
+        ignoreConditionalTests: true,
+        ignoreMixedLogicalExpressions: true,
+      },
+    ],
     camelcase: [
       "error",
       {
@@ -68,12 +99,32 @@ module.exports = {
     ],
     "eol-last": ["error", "always"],
     eqeqeq: ["error"],
+    "getter-return": [
+      "error",
+      {
+        allowImplicit: false,
+      },
+    ],
+    "import/no-unused-modules": [
+      "warn",
+      {
+        unusedExports: true,
+      },
+    ],
     "lines-around-comment": ["error"],
     "new-cap": [
       "error",
-      { newIsCap: true, capIsNewExceptionPattern: "^Gesture\\." },
+      {
+        newIsCap: true,
+        capIsNewExceptionPattern: "^Gesture\\.",
+      },
     ],
     "new-parens": ["off"],
+    "no-async-promise-executor": ["error"],
+    "no-await-in-loop": ["error"],
+    "no-catch-shadow": ["error"],
+    "no-compare-neg-zero": ["error"],
+    "no-cond-assign": ["error"],
     "no-console": [
       "warn",
       {
@@ -87,16 +138,20 @@ module.exports = {
       },
     ],
     "no-control-regex": ["error"],
-    "no-empty": [
-      "error",
-      {
-        allowEmptyCatch: false,
-      },
-    ],
+    "no-delete-var": ["error"],
+    "no-dupe-args": ["error"],
+    "no-dupe-else-if": ["error"],
+    "no-duplicate-case": ["error"],
     "no-else-return": [
       "error",
       {
         allowElseIf: true,
+      },
+    ],
+    "no-empty": [
+      "error",
+      {
+        allowEmptyCatch: false,
       },
     ],
     "no-empty-character-class": ["error"],
@@ -124,6 +179,7 @@ module.exports = {
     ],
     "no-func-assign": ["error"],
     "no-implied-eval": ["error"],
+    "no-import-assign": ["error"],
     "no-inner-declarations": ["error", "both"],
     "no-invalid-regexp": ["error"],
     "no-iterator": ["error"],
@@ -138,6 +194,7 @@ module.exports = {
     "no-obj-calls": ["error"],
     "no-octal": ["error"],
     "no-octal-escape": ["error"],
+    "no-promise-executor-return": ["error"],
     "no-proto": ["error"],
     "no-redeclare": [
       "error",
@@ -146,17 +203,33 @@ module.exports = {
       },
     ],
     "no-regex-spaces": ["error"],
+    "no-relative-import-paths/no-relative-import-paths": [
+      "warn",
+      {
+        allowSameFolder: true,
+        rootDir: "src",
+        prefix: "@",
+      },
+    ],
     "no-return-assign": ["error", "except-parens"],
     "no-script-url": ["error"],
     "no-self-compare": ["error"],
     "no-sequences": ["error"],
+    "no-setter-return": ["error"],
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": "error",
     "no-shadow-restricted-names": ["error"],
     "no-sparse-arrays": ["error"],
+    "no-template-curly-in-string": ["error"],
     "no-undef-init": ["error"],
     "no-underscore-dangle": ["error"],
     "no-unexpected-multiline": ["error"],
+    "no-unreachable-loop": [
+      "error",
+      {
+        ignore: ["DoWhileStatement"],
+      },
+    ],
+    "no-unsafe-finally": ["error"],
     "no-unused-expressions": [
       "error",
       {
@@ -164,6 +237,7 @@ module.exports = {
         allowTernary: true,
       },
     ],
+    "no-unused-vars": "off",
     "no-useless-escape": ["error"],
     "no-void": [
       "error",
@@ -173,80 +247,6 @@ module.exports = {
     ],
     "no-with": ["error"],
     "nonblock-statement-body-position": ["error"],
-    radix: ["error", "as-needed"],
-    "require-await": ["error"],
-    "sort-vars": [
-      "error",
-      {
-        ignoreCase: false,
-      },
-    ],
-    "use-isnan": ["error"],
-    "valid-typeof": [
-      "error",
-      {
-        requireStringLiterals: false,
-      },
-    ],
-    strict: ["error", "never"],
-    "getter-return": [
-      "error",
-      {
-        allowImplicit: false,
-      },
-    ],
-    "no-async-promise-executor": ["error"],
-    "no-await-in-loop": ["error"],
-    "no-compare-neg-zero": ["error"],
-    "no-cond-assign": ["error"],
-    "no-dupe-args": ["error"],
-    "no-dupe-else-if": ["error"],
-    "no-duplicate-case": ["error"],
-    "no-import-assign": ["error"],
-    "no-promise-executor-return": ["error"],
-    "no-setter-return": ["error"],
-    "no-template-curly-in-string": ["error"],
-    "no-unreachable-loop": [
-      "error",
-      {
-        ignore: ["DoWhileStatement"],
-      },
-    ],
-    "no-unsafe-finally": ["error"],
-    "require-atomic-updates": ["error"],
-    "no-catch-shadow": ["error"],
-    "no-delete-var": ["error"],
-    "@typescript-eslint/no-floating-promises": [
-      "error",
-      {
-        ignoreVoid: true,
-      },
-    ],
-    "react/react-in-jsx-scope": "off",
-    "react-hooks/exhaustive-deps": "off",
-    "prettier/prettier": "error",
-    "no-unused-vars": "off",
-    "unused-imports/no-unused-imports": "error",
-    "import/no-unused-modules": ["warn", { unusedExports: true }],
-    "no-relative-import-paths/no-relative-import-paths": [
-      "warn",
-      { allowSameFolder: true, rootDir: "src", prefix: "@" },
-    ],
-    "react/jsx-curly-brace-presence": ["error", "never"],
-    "react/prop-types": "off",
-    "@typescript-eslint/prefer-nullish-coalescing": [
-      "error",
-      {
-        ignoreConditionalTests: true,
-        ignoreMixedLogicalExpressions: true,
-      },
-    ],
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "perfectionist/sort-imports": "off",
-    "perfectionist/sort-exports": "off",
-    "perfectionist/sort-named-imports": "off",
-    "perfectionist/sort-named-exports": "off",
     "perfectionist/sort-classes": [
       "error",
       {
@@ -267,7 +267,27 @@ module.exports = {
         ],
       },
     ],
+    "perfectionist/sort-exports": "off",
+    "perfectionist/sort-imports": "off",
     "perfectionist/sort-jsx-props": "off",
+    "perfectionist/sort-named-exports": "off",
+    "perfectionist/sort-named-imports": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        bracketSameLine: true,
+        singleQuote: true,
+        printWidth: 100,
+        semi: false,
+      },
+    ],
+    radix: ["error", "as-needed"],
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-native/no-unused-styles": "error",
+    "react-native/sort-styles": "error",
+    "react/display-name": "error",
+    "react/jsx-curly-brace-presence": ["error", "never"],
     "react/jsx-sort-props": [
       "error",
       {
@@ -279,7 +299,27 @@ module.exports = {
         noSortAlphabetically: false,
       },
     ],
-    "@typescript-eslint/array-type": ["error", { default: "generic" }],
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "require-atomic-updates": ["error"],
+    "require-await": ["error"],
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error",
+    "sort-vars": [
+      "error",
+      {
+        ignoreCase: false,
+      },
+    ],
+    strict: ["error", "never"],
+    "unused-imports/no-unused-imports": "error",
+    "use-isnan": ["error"],
+    "valid-typeof": [
+      "error",
+      {
+        requireStringLiterals: false,
+      },
+    ],
   },
   env: {
     es2020: true,
