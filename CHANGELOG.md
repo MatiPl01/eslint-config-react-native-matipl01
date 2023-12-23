@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v2.0.2...v2.1.0) (2023-12-23)
+
+
+### Features
+
+* Improve currently used rules, add more hooks checks ([#55](https://github.com/MatiPl01/eslint-config-react-native-matipl01/issues/55)) ([eeab52e](https://github.com/MatiPl01/eslint-config-react-native-matipl01/commit/eeab52e31ed00ffc7a13b91684282c3ca9c28794))
+
 ## [2.0.2](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v2.0.1...v2.0.2) (2023-10-19)
 
 ### Bug Fixes
