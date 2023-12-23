@@ -3,9 +3,9 @@ module.exports = {
     es2020: true
   },
   extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:perfectionist/recommended-natural',
@@ -27,20 +27,36 @@ module.exports = {
   },
   plugins: [
     'react',
-    '@typescript-eslint',
+    'react-native',
+    'react-hooks',
     'import',
     'unused-imports',
     'simple-import-sort',
     'no-relative-import-paths',
     'perfectionist',
+    '@typescript-eslint',
     'prettier'
   ],
   root: true,
   rules: {
     '@typescript-eslint/array-type': ['error', { default: 'generic' }],
+    '@typescript-eslint/consistent-type-exports': 'error',
+    '@typescript-eslint/consistent-type-imports': 'error',
+    '@typescript-eslint/member-ordering': [
+      'error',
+      { default: ['signature', 'method', 'constructor', 'field'] }
+    ],
+    '@typescript-eslint/naming-convention': [
+      2,
+      {
+        format: ['PascalCase'],
+        selector: 'enumMember'
+      }
+    ],
     '@typescript-eslint/no-floating-promises': [
       'error',
       {
+        ignoreIIFE: true,
         ignoreVoid: true
       }
     ],
@@ -234,8 +250,10 @@ module.exports = {
     'perfectionist/sort-jsx-props': 'off',
     'perfectionist/sort-named-exports': 'off',
     'perfectionist/sort-named-imports': 'off',
+    'perfectionist/sort-object-types': 'off',
     'prettier/prettier': 'error',
     radix: ['error', 'as-needed'],
+    'react/display-name': 'error',
     'react/jsx-curly-brace-presence': ['error', 'never'],
     'react/jsx-sort-props': [
       'error',
@@ -250,7 +268,10 @@ module.exports = {
     ],
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
-    'react-hooks/exhaustive-deps': 'off',
+    'react-hooks/exhaustive-deps': 'error',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-native/no-unused-styles': 'error',
+    'react-native/sort-styles': 'error',
     'require-atomic-updates': ['error'],
     'require-await': ['error'],
     'simple-import-sort/exports': 'error',
