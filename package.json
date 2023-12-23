@@ -39,7 +39,6 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "yarn lint:fix",
-      "bash -c tsc --noEmit",
       "yarn format:code"
     ],
     "package.json": [
