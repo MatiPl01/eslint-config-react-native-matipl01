@@ -1,326 +1,309 @@
 module.exports = {
-  root: true,
+  env: {
+    es2020: true
+  },
   extends: [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "eslint:recommended",
-    "plugin:import/recommended",
-    "plugin:import/typescript",
-    "plugin:perfectionist/recommended-natural",
-    "plugin:markdown/recommended",
-  ],
-  plugins: [
-    "react",
-    "react-native",
-    "react-hooks",
-    "@typescript-eslint",
-    "import",
-    "unused-imports",
-    "simple-import-sort",
-    "no-relative-import-paths",
-    "perfectionist",
-    "prettier",
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
+    'plugin:perfectionist/recommended-natural',
+    'plugin:markdown/recommended',
+    'prettier'
   ],
   overrides: [
     {
-      files: ["**/*.md"],
-      processor: "markdown/markdown",
-    },
+      // Enable the Markdown processor for all .md files.
+      files: ['**/*.md'],
+      processor: 'markdown/markdown'
+    }
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    projectRoot: ".",
-    project: "./tsconfig.json",
     ecmaFeatures: {},
+    project: './tsconfig.json',
+    projectRoot: '.'
   },
-  settings: {
-    react: {
-      version: "detect",
-    },
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"],
-    },
-    "import/resolver": {
-      typescript: {
-        alwaysTryTypes: true,
-        project: "./tsconfig.json",
-      },
-    },
-  },
+  plugins: [
+    'react',
+    'react-native',
+    'react-hooks',
+    'import',
+    'unused-imports',
+    'simple-import-sort',
+    'no-relative-import-paths',
+    'perfectionist',
+    '@typescript-eslint',
+    'prettier'
+  ],
+  root: true,
   rules: {
-    "@typescript-eslint/array-type": [
-      "error",
-      {
-        default: "generic",
-      },
+    '@typescript-eslint/array-type': ['error', { default: 'generic' }],
+    '@typescript-eslint/consistent-type-exports': 'error',
+    '@typescript-eslint/consistent-type-imports': 'error',
+    '@typescript-eslint/member-ordering': [
+      'error',
+      { default: ['signature', 'method', 'constructor', 'field'] }
     ],
-    "@typescript-eslint/consistent-type-exports": "error",
-    "@typescript-eslint/consistent-type-imports": "error",
-    "@typescript-eslint/naming-convention": [
+    '@typescript-eslint/naming-convention': [
       2,
       {
-        selector: "enumMember",
-        format: ["PascalCase"],
-      },
+        format: ['PascalCase'],
+        selector: 'enumMember'
+      }
     ],
-    "@typescript-eslint/no-floating-promises": [
-      "error",
+    '@typescript-eslint/no-floating-promises': [
+      'error',
       {
-        ignoreVoid: true,
-      },
+        ignoreIIFE: true,
+        ignoreVoid: true
+      }
     ],
-    "@typescript-eslint/no-shadow": "error",
-    "@typescript-eslint/prefer-nullish-coalescing": [
-      "error",
+    '@typescript-eslint/no-shadow': 'error',
+    '@typescript-eslint/prefer-nullish-coalescing': [
+      'error',
       {
         ignoreConditionalTests: true,
-        ignoreMixedLogicalExpressions: true,
-      },
+        ignoreMixedLogicalExpressions: true
+      }
     ],
     camelcase: [
-      "error",
+      'error',
       {
-        ignoreDestructuring: false,
-        ignoreImports: false,
-        ignoreGlobals: false,
-        properties: "always",
         allow: [],
-      },
+        ignoreDestructuring: false,
+        ignoreGlobals: false,
+        ignoreImports: false,
+        properties: 'always'
+      }
     ],
-    "comma-dangle": ["off"],
-    "consistent-this": ["error", "self"],
-    "dot-notation": [
-      "error",
+    'comma-dangle': ['off'],
+    'consistent-this': ['error', 'self'],
+    'dot-notation': [
+      'error',
       {
         allowKeywords: true,
-        allowPattern: "",
-      },
+        allowPattern: ''
+      }
     ],
-    "eol-last": ["error", "always"],
-    eqeqeq: ["error"],
-    "getter-return": [
-      "error",
+    'eol-last': ['error', 'always'],
+    eqeqeq: ['error'],
+    'getter-return': [
+      'error',
       {
-        allowImplicit: false,
-      },
+        allowImplicit: false
+      }
     ],
-    "import/no-unused-modules": [
-      "warn",
+    'import/no-unused-modules': ['warn', { unusedExports: true }],
+    'lines-around-comment': ['error'],
+    'new-cap': [
+      'error',
+      { capIsNewExceptionPattern: '^Gesture\\.', newIsCap: true }
+    ],
+    'new-parens': ['off'],
+    'no-async-promise-executor': ['error'],
+    'no-await-in-loop': ['error'],
+    'no-catch-shadow': ['error'],
+    'no-compare-neg-zero': ['error'],
+    'no-cond-assign': ['error'],
+    'no-console': [
+      'warn',
       {
-        unusedExports: true,
-      },
+        allow: ['warn', 'error']
+      }
     ],
-    "lines-around-comment": ["error"],
-    "new-cap": [
-      "error",
+    'no-constant-condition': [
+      'error',
       {
-        newIsCap: true,
-        capIsNewExceptionPattern: "^Gesture\\.",
-      },
+        checkLoops: true
+      }
     ],
-    "new-parens": ["off"],
-    "no-async-promise-executor": ["error"],
-    "no-await-in-loop": ["error"],
-    "no-catch-shadow": ["error"],
-    "no-compare-neg-zero": ["error"],
-    "no-cond-assign": ["error"],
-    "no-console": [
-      "warn",
+    'no-control-regex': ['error'],
+    'no-delete-var': ['error'],
+    'no-dupe-args': ['error'],
+    'no-dupe-else-if': ['error'],
+    'no-duplicate-case': ['error'],
+    'no-else-return': [
+      'error',
       {
-        allow: ["warn", "error"],
-      },
+        allowElseIf: true
+      }
     ],
-    "no-constant-condition": [
-      "error",
+    'no-empty': [
+      'error',
       {
-        checkLoops: true,
-      },
+        allowEmptyCatch: false
+      }
     ],
-    "no-control-regex": ["error"],
-    "no-delete-var": ["error"],
-    "no-dupe-args": ["error"],
-    "no-dupe-else-if": ["error"],
-    "no-duplicate-case": ["error"],
-    "no-else-return": [
-      "error",
+    'no-empty-character-class': ['error'],
+    'no-empty-function': [
+      'error',
       {
-        allowElseIf: true,
-      },
+        allow: ['constructors']
+      }
     ],
-    "no-empty": [
-      "error",
+    'no-eq-null': ['error'],
+    'no-ex-assign': ['error'],
+    'no-extend-native': ['error'],
+    'no-extra-bind': ['error'],
+    'no-extra-boolean-cast': [
+      'error',
       {
-        allowEmptyCatch: false,
-      },
+        enforceForLogicalOperands: false
+      }
     ],
-    "no-empty-character-class": ["error"],
-    "no-empty-function": [
-      "error",
+    'no-fallthrough': [
+      'error',
       {
-        allow: ["constructors"],
-      },
+        commentPattern: ''
+      }
     ],
-    "no-eq-null": ["error"],
-    "no-ex-assign": ["error"],
-    "no-extend-native": ["error"],
-    "no-extra-bind": ["error"],
-    "no-extra-boolean-cast": [
-      "error",
+    'no-func-assign': ['error'],
+    'no-implied-eval': ['error'],
+    'no-import-assign': ['error'],
+    'no-inner-declarations': ['error', 'both'],
+    'no-invalid-regexp': ['error'],
+    'no-iterator': ['error'],
+    'no-label-var': ['error'],
+    'no-labels': ['error'],
+    'no-lone-blocks': ['error'],
+    'no-lonely-if': ['error'],
+    'no-loop-func': ['error'],
+    'no-new': ['error'],
+    'no-new-object': ['error'],
+    'no-new-wrappers': ['error'],
+    'no-obj-calls': ['error'],
+    'no-octal': ['error'],
+    'no-octal-escape': ['error'],
+    'no-promise-executor-return': ['error'],
+    'no-proto': ['error'],
+    'no-redeclare': [
+      'error',
       {
-        enforceForLogicalOperands: false,
-      },
+        builtinGlobals: true
+      }
     ],
-    "no-fallthrough": [
-      "error",
+    'no-regex-spaces': ['error'],
+    'no-relative-import-paths/no-relative-import-paths': [
+      'warn',
+      { allowSameFolder: true, prefix: '@', rootDir: 'src' }
+    ],
+    'no-return-assign': ['error', 'except-parens'],
+    'no-script-url': ['error'],
+    'no-self-compare': ['error'],
+    'no-sequences': ['error'],
+    'no-setter-return': ['error'],
+    'no-shadow': 'off',
+    'no-shadow-restricted-names': ['error'],
+    'no-sparse-arrays': ['error'],
+    'no-template-curly-in-string': ['error'],
+    'no-undef-init': ['error'],
+    'no-underscore-dangle': ['error'],
+    'no-unexpected-multiline': ['error'],
+    'no-unreachable-loop': [
+      'error',
       {
-        commentPattern: "",
-      },
+        ignore: ['DoWhileStatement']
+      }
     ],
-    "no-func-assign": ["error"],
-    "no-implied-eval": ["error"],
-    "no-import-assign": ["error"],
-    "no-inner-declarations": ["error", "both"],
-    "no-invalid-regexp": ["error"],
-    "no-iterator": ["error"],
-    "no-label-var": ["error"],
-    "no-labels": ["error"],
-    "no-lone-blocks": ["error"],
-    "no-lonely-if": ["error"],
-    "no-loop-func": ["error"],
-    "no-new": ["error"],
-    "no-new-object": ["error"],
-    "no-new-wrappers": ["error"],
-    "no-obj-calls": ["error"],
-    "no-octal": ["error"],
-    "no-octal-escape": ["error"],
-    "no-promise-executor-return": ["error"],
-    "no-proto": ["error"],
-    "no-redeclare": [
-      "error",
-      {
-        builtinGlobals: true,
-      },
-    ],
-    "no-regex-spaces": ["error"],
-    "no-relative-import-paths/no-relative-import-paths": [
-      "warn",
-      {
-        allowSameFolder: true,
-        rootDir: "src",
-        prefix: "@",
-      },
-    ],
-    "no-return-assign": ["error", "except-parens"],
-    "no-script-url": ["error"],
-    "no-self-compare": ["error"],
-    "no-sequences": ["error"],
-    "no-setter-return": ["error"],
-    "no-shadow": "off",
-    "no-shadow-restricted-names": ["error"],
-    "no-sparse-arrays": ["error"],
-    "no-template-curly-in-string": ["error"],
-    "no-undef-init": ["error"],
-    "no-underscore-dangle": ["error"],
-    "no-unexpected-multiline": ["error"],
-    "no-unreachable-loop": [
-      "error",
-      {
-        ignore: ["DoWhileStatement"],
-      },
-    ],
-    "no-unsafe-finally": ["error"],
-    "no-unused-expressions": [
-      "error",
+    'no-unsafe-finally': ['error'],
+    'no-unused-expressions': [
+      'error',
       {
         allowShortCircuit: true,
-        allowTernary: true,
-      },
+        allowTernary: true
+      }
     ],
-    "no-unused-vars": "off",
-    "no-useless-escape": ["error"],
-    "no-void": [
-      "error",
+    'no-unused-vars': 'off',
+    'no-useless-escape': ['error'],
+    'no-void': [
+      'error',
       {
-        allowAsStatement: true,
-      },
+        allowAsStatement: true
+      }
     ],
-    "no-with": ["error"],
-    "nonblock-statement-body-position": ["error"],
-    "perfectionist/sort-classes": [
-      "error",
+    'no-with': ['error'],
+    'nonblock-statement-body-position': ['error'],
+    'perfectionist/sort-classes': [
+      'error',
       {
-        type: "natural",
-        order: "asc",
         groups: [
-          "index-signature",
-          "static-property",
-          "private-property",
-          "property",
-          "constructor",
-          ["get-method", "set-method"],
-          "static-method",
-          "private-method",
-          "static-private-method",
-          "method",
-          "unknown",
+          'index-signature',
+          'static-property',
+          'private-property',
+          'property',
+          'constructor',
+          ['get-method', 'set-method'],
+          'static-method',
+          'private-method',
+          'static-private-method',
+          'method',
+          'unknown'
         ],
-      },
+        order: 'asc',
+        type: 'natural'
+      }
     ],
-    "perfectionist/sort-exports": "off",
-    "perfectionist/sort-imports": "off",
-    "perfectionist/sort-jsx-props": "off",
-    "perfectionist/sort-named-exports": "off",
-    "perfectionist/sort-named-imports": "off",
-    "prettier/prettier": [
-      "error",
-      {
-        bracketSameLine: true,
-        singleQuote: true,
-        printWidth: 100,
-        semi: false,
-      },
-    ],
-    radix: ["error", "as-needed"],
-    "react-hooks/exhaustive-deps": "warn",
-    "react-hooks/rules-of-hooks": "error",
-    "react-native/no-unused-styles": "error",
-    "react-native/sort-styles": "error",
-    "react/display-name": "error",
-    "react/jsx-curly-brace-presence": ["error", "never"],
-    "react/jsx-sort-props": [
-      "error",
+    'perfectionist/sort-exports': 'off',
+    'perfectionist/sort-imports': 'off',
+    'perfectionist/sort-jsx-props': 'off',
+    'perfectionist/sort-named-exports': 'off',
+    'perfectionist/sort-named-imports': 'off',
+    'perfectionist/sort-object-types': 'off',
+    'prettier/prettier': 'error',
+    radix: ['error', 'as-needed'],
+    'react/display-name': 'error',
+    'react/jsx-curly-brace-presence': ['error', 'never'],
+    'react/jsx-sort-props': [
+      'error',
       {
         callbacksLast: true,
-        shorthandFirst: false,
-        shorthandLast: true,
-        multiline: "last",
         ignoreCase: true,
+        multiline: 'last',
         noSortAlphabetically: false,
-      },
+        shorthandFirst: false,
+        shorthandLast: true
+      }
     ],
-    "react/prop-types": "off",
-    "react/react-in-jsx-scope": "off",
-    "require-atomic-updates": ["error"],
-    "require-await": ["error"],
-    "simple-import-sort/exports": "error",
-    "simple-import-sort/imports": "error",
-    "sort-vars": [
-      "error",
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react-hooks/exhaustive-deps': 'error',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-native/no-unused-styles': 'error',
+    'react-native/sort-styles': 'error',
+    'require-atomic-updates': ['error'],
+    'require-await': ['error'],
+    'simple-import-sort/exports': 'error',
+    'simple-import-sort/imports': 'error',
+    'sort-vars': [
+      'error',
       {
-        ignoreCase: false,
-      },
+        ignoreCase: false
+      }
     ],
-    strict: ["error", "never"],
-    "unused-imports/no-unused-imports": "error",
-    "use-isnan": ["error"],
-    "valid-typeof": [
-      "error",
+    strict: ['error', 'never'],
+    'unused-imports/no-unused-imports': 'error',
+    'use-isnan': ['error'],
+    'valid-typeof': [
+      'error',
       {
-        requireStringLiterals: false,
-      },
-    ],
+        requireStringLiterals: false
+      }
+    ]
   },
-  env: {
-    es2020: true,
-  },
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx']
+    },
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+        project: './tsconfig.json'
+      }
+    },
+    react: {
+      version: 'detect'
+    }
+  }
 };
