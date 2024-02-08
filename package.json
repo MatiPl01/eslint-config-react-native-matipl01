@@ -4,6 +4,7 @@
   "version": "2.1.0",
   "author": "Mateusz Łopaciński <lop.mateusz.2001@gmail.com>",
   "dependencies": {
+    "@types/jest": "^29.5.12",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
     "eslint-config-prettier": "^9.1.0",
@@ -22,17 +23,17 @@
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/commit-analyzer": "^11.0.0",
+    "@semantic-release/commit-analyzer": "^11.1.0",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^9.0.7",
-    "@semantic-release/npm": "^11.0.0",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/npm": "^11.0.2",
     "@semantic-release/release-notes-generator": "^12.0.0",
     "eslint": "^8.56.0",
-    "husky": "^8.0.0",
+    "husky": "^9.0.10",
     "lint-staged": "^15.0.1",
-    "semantic-release": "^22.0.5",
-    "semantic-release-cli": "^5.4.4",
-    "syncpack": "^11.2.1"
+    "semantic-release": "^23.0.2",
+    "semantic-release-cli": "^5.4.6",
+    "syncpack": "^12.3.0"
   },
   "homepage": "https://github.com/MatiPl01/eslint-config-react-native-matipl01#readme",
   "license": "MIT",
