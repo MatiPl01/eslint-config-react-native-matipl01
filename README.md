@@ -47,6 +47,11 @@ export default [
 ]
 ```
 
+### ESLint (before v9)
+
+The old eslint API will be no longer supported. Install old version of the package
+to use it with older ESLint versions (the latest supporting ESLint 8 is 2.1.0)
+
 > [!NOTE]  
 > If you use a custom `prettier` config, eslint will show suggestions based
 on your `prettier` configuration stored in the `.pretterrc` file.
