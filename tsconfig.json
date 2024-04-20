@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "types": ["jest"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "rootDir": ".",
+    "strict": true,
+    "noImplicitAny": true,
+    "alwaysStrict": true,
+    "moduleResolution": "node"
+  },
+  "include": [
+    "tests/**/*"
+  ]
+}
