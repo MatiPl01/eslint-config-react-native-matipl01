@@ -1,4 +1,0 @@
-{
-  "extends": ["plugin:perfectionist/recommended-natural", "prettier"],
-  "plugins": ["perfectionist", "prettier"]
-}
