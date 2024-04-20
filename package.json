@@ -75,6 +75,7 @@
   "scripts": {
     "format:code": "prettier --write . --ignore-unknown",
     "format:deps": "syncpack format",
+    "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "postinstall": "yarn dlx @yarnpkg/sdks vscode",
     "prepare": "husky install",
