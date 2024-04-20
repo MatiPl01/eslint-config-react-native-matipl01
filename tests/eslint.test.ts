@@ -6,6 +6,6 @@ describe('eslint', () => {
       overrideConfigFile: './index.js'
     });
 
-    expect(await eslint.lintText('')).toBeTruthy();
+    expect(await eslint.calculateConfigForFile('test.tsx')).toMatchSnapshot();
   });
 });

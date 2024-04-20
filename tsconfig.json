@@ -14,5 +14,8 @@
   },
   "include": [
     "tests/**/*"
+  ],
+  "exclude": [
+    "*.snap"
   ]
 }
