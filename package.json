@@ -48,9 +48,16 @@
   },
   "main": "index.js",
   "peerDependencies": {
-    "eslint": ">=6.0.0",
-    "typescript": ">=3.7.0"
+    "eslint": ">=9.0.0",
+    "typescript": ">=5.4.0"
   },
+  "files": [
+    "index.js",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "tsconfig.base.json"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -60,5 +67,6 @@
     "format:deps": "syncpack format",
     "lint:fix": "eslint --fix .",
     "prepare": "husky install"
-  }
+  },
+  "packageManager": "yarn@4.1.1"
 }
