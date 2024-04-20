@@ -36,11 +36,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - name: ⚙️ Enable Corepack
-        run: corepack enable
-
       - name: 📦 Install dependencies
-        run: corepack yarn install --immutable
+        run: yarn install --immutable
 
       - name: 🎉 Release
         run: yarn semantic-release
