@@ -10,10 +10,13 @@
     "strict": true,
     "noImplicitAny": true,
     "alwaysStrict": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "paths": {
+      "eslint-config-react-native-matipl01": ["./index.js"]
+    }
   },
   "include": [
-    "tests/**/*"
+    "tests"
   ],
   "exclude": [
     "*.snap"
