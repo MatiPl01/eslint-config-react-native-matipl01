@@ -5,6 +5,6 @@ export default [
   perfectionistNatural,
   eslintConfigPrettier,
   {
-    ignores: ['.yarn', 'CHANGELOG.md']
+    ignores: ['.yarn', '.pnp.*', 'CHANGELOG.md']
   }
 ];

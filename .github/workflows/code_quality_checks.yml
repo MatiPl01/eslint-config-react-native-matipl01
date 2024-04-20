@@ -1,0 +1,42 @@
+name: Code Quality Checks
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+  push:
+    branches:
+      - master
+
+jobs:
+  quality-checks:
+    name: 🔍 Typecheck, Lint, and Build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
+
+    steps:
+      - name: 🛒 Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: 🛠 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: 🕵️  Typecheck
+        run: yarn typecheck
+        env:
+          CI: true
+
+      - name: 🔬 Lint
+        run: yarn lint
+        env:
+          CI: true
