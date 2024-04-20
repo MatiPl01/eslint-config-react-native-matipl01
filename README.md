@@ -24,18 +24,32 @@ npm install eslint-config-react-native-matipl01 --save-dev
 
 ## Usage
 
-### ESLint
+### ESLint (v9 and newer)
 
 Extend this config in your eslint configuration file (more information about eslint configuration file formats is in [docs](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file-formats)):
 
-```json
-{
-  "extends": "react-native-matipl01"
-}
+```js
+// eslint.config.js
+import eslintConfig from 'eslint-config-react-native-matipl01'
+
+export default eslintConfig
 ```
 
-If yo use a custom `prettier` config, eslint will show suggestions based
-on your `prettier` configuration.
+You can add your custom configs in the following way:
+
+```js
+// eslint.config.js
+import eslintConfig from 'eslint-config-react-native-matipl01'
+
+export default [
+  ...eslintConfig,
+  // <custom config>
+]
+```
+
+> [!INFO]  
+> If you use a custom `prettier` config, eslint will show suggestions based
+on your `prettier` configuration stored in the `.pretterrc` file.
 
 ### TypeScript
 
