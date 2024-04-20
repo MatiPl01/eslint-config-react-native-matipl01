@@ -47,7 +47,7 @@ export default [
 ]
 ```
 
-> [!INFO]  
+> [!NOTE]  
 > If you use a custom `prettier` config, eslint will show suggestions based
 on your `prettier` configuration stored in the `.pretterrc` file.
 
