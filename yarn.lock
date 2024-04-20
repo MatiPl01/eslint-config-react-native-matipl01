@@ -4425,7 +4425,6 @@ __metadata:
     "@typescript-eslint/parser": "npm:^7.7.0"
     "@typescript-eslint/types": "npm:^7.7.0"
     babel-jest: "npm:^29.7.0"
-    conventional-changelog-angular: "npm:^7.0.0"
     eslint: "npm:^9.1.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-import-resolver-typescript: "npm:^3.6.1"
