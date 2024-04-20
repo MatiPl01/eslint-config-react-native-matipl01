@@ -77,7 +77,6 @@
     "format:deps": "syncpack format",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "postinstall": "yarn dlx @yarnpkg/sdks vscode",
     "prepare": "husky install",
     "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest",
     "typecheck": "tsc -p tsconfig.json --noEmit"
