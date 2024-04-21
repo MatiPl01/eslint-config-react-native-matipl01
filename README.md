@@ -1,5 +1,10 @@
 # eslint-config-react-native-matipl01
 
+> [!IMPORTANT]  
+> Some plugins used in this config haven't been adjusted to work
+> with ESLint v9 yet. Stick with ESLint v8 if you want all rules to
+> be enabled.
+
 [![npm version](https://badge.fury.io/js/eslint-config-react-native-matipl01.svg)](https://badge.fury.io/js/eslint-config-react-native-matipl01)
 
 ESLint and TypeScript configuration used in my React Native projects.

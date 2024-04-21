@@ -16,11 +16,46 @@ import ts from 'typescript-eslint';
 
 const compat = new FlatCompat();
 
+// IMPORTANT
+// ESLint 9 doesn't support all rules yet, so we need to exclude them
+// from the configs that are extended from the plugins
+// These rules will be added once respective plugins are updated
+function excludeRules(configs, exclude) {
+  return configs.map(config => {
+    if (config.rules) {
+      const rules = { ...config.rules };
+      for (const rule of exclude) {
+        delete rules[rule];
+      }
+      return { ...config, rules };
+    }
+    return config;
+  });
+}
+
 export default [
   js.configs.recommended,
   ...ts.configs.recommendedTypeChecked,
-  ...compat.extends('plugin:react/recommended'),
-  ...compat.extends('plugin:import/recommended'),
+  ...excludeRules(
+    compat.extends('plugin:react/recommended'),
+    // Temporary disable rules that aren't supported by ESLint 9 yet
+    [
+      'react/no-string-refs',
+      'react/display-name',
+      'react/no-direct-mutation-state',
+      'react/prop-types',
+      'react/require-render-return',
+      'react/jsx-no-undef',
+      'react/jsx-uses-react',
+      'react/jsx-uses-vars',
+      'react/react-in-jsx-scope'
+    ]
+  ),
+  ...excludeRules(
+    compat.extends('plugin:import/recommended'),
+    // Temporary disable rules that aren't supported by ESLint 9 yet
+    ['import/no-named-as-default', 'import/no-named-as-default-member']
+  ),
   imports.configs.typescript,
   imports.configs['react-native'],
   perfectionistNatural,
@@ -98,7 +133,7 @@ export default [
           allowImplicit: false
         }
       ],
-      'import/no-unused-modules': ['warn', { unusedExports: true }],
+      // 'import/no-unused-modules': ['warn', { unusedExports: true }],
       'lines-around-comment': ['error'],
       'new-cap': [
         'error',
@@ -256,7 +291,7 @@ export default [
       'perfectionist/sort-object-types': 'off',
       'prettier/prettier': 'error',
       radix: ['error', 'as-needed'],
-      'react/display-name': 'error',
+      // 'react/display-name': 'error',
       'react/jsx-curly-brace-presence': ['error', 'never'],
       'react/jsx-sort-props': [
         'error',
@@ -273,7 +308,7 @@ export default [
       'react/react-in-jsx-scope': 'off',
       'react-hooks/exhaustive-deps': 'error',
       'react-hooks/rules-of-hooks': 'error',
-      'react-native/no-unused-styles': 'error',
+      // 'react-native/no-unused-styles': 'error',
       'react-native/sort-styles': 'error',
       'require-atomic-updates': ['error'],
       'require-await': ['error'],
