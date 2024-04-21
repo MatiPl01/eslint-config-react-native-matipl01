@@ -1,3 +1,21 @@
+# [3.0.0](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v2.1.0...v3.0.0) (2024-04-20)
+
+
+### chore
+
+* Change nodeLinker to pnpm to fix semantic-release missing deps ([#80](https://github.com/MatiPl01/eslint-config-react-native-matipl01/issues/80)) ([f5528a6](https://github.com/MatiPl01/eslint-config-react-native-matipl01/commit/f5528a692a2863b67d834743a3a0e9ed33edbe2d))
+
+
+### Features
+
+* Add code quality and testing github actions ([#73](https://github.com/MatiPl01/eslint-config-react-native-matipl01/issues/73)) ([9aa619f](https://github.com/MatiPl01/eslint-config-react-native-matipl01/commit/9aa619f7fd0d09e1c3db60f1b3d23daafbac0e63))
+
+
+### BREAKING CHANGES
+
+* The new eslint v9 version uses the new API that is not
+compatible with v8 and previous releases.
+
 # [2.1.0](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v2.0.2...v2.1.0) (2023-12-23)
 
 ### Features
