@@ -403,20 +403,8 @@ exports[`eslint returns correct configuration 1`] = `
     "import/no-duplicates": [
       1,
     ],
-    "import/no-named-as-default": [
-      1,
-    ],
-    "import/no-named-as-default-member": [
-      1,
-    ],
     "import/no-unresolved": [
       2,
-    ],
-    "import/no-unused-modules": [
-      1,
-      {
-        "unusedExports": true,
-      },
     ],
     "indent": [
       0,
@@ -1082,13 +1070,7 @@ exports[`eslint returns correct configuration 1`] = `
     "react-hooks/rules-of-hooks": [
       2,
     ],
-    "react-native/no-unused-styles": [
-      2,
-    ],
     "react-native/sort-styles": [
-      2,
-    ],
-    "react/display-name": [
       2,
     ],
     "react/jsx-child-element-spacing": [
@@ -1140,9 +1122,6 @@ exports[`eslint returns correct configuration 1`] = `
     "react/jsx-no-target-blank": [
       2,
     ],
-    "react/jsx-no-undef": [
-      2,
-    ],
     "react/jsx-one-expression-per-line": [
       0,
     ],
@@ -1167,12 +1146,6 @@ exports[`eslint returns correct configuration 1`] = `
     "react/jsx-tag-spacing": [
       0,
     ],
-    "react/jsx-uses-react": [
-      2,
-    ],
-    "react/jsx-uses-vars": [
-      2,
-    ],
     "react/jsx-wrap-multilines": [
       0,
     ],
@@ -1185,9 +1158,6 @@ exports[`eslint returns correct configuration 1`] = `
     "react/no-deprecated": [
       2,
     ],
-    "react/no-direct-mutation-state": [
-      2,
-    ],
     "react/no-find-dom-node": [
       2,
     ],
@@ -1195,9 +1165,6 @@ exports[`eslint returns correct configuration 1`] = `
       2,
     ],
     "react/no-render-return-value": [
-      2,
-    ],
-    "react/no-string-refs": [
       2,
     ],
     "react/no-unescaped-entities": [
@@ -1214,9 +1181,6 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "react/react-in-jsx-scope": [
       0,
-    ],
-    "react/require-render-return": [
-      2,
     ],
     "require-atomic-updates": [
       2,
