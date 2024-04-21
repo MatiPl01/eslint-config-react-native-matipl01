@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v3.0.0...v3.0.1) (2024-04-21)
+
+
+### Bug Fixes
+
+* Remove rules that don't support ESLint v9 yet, add index.d.ts ([#83](https://github.com/MatiPl01/eslint-config-react-native-matipl01/issues/83)) ([837d807](https://github.com/MatiPl01/eslint-config-react-native-matipl01/commit/837d807880c0ad213806812bfc4a417e553e4861))
+
 # [3.0.0](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v2.1.0...v3.0.0) (2024-04-20)
 
 
