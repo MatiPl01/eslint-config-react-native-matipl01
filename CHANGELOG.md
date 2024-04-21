@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v3.0.1...v3.0.2) (2024-04-21)
+
+
+### Bug Fixes
+
+* index.d.ts reference in package.json ([#84](https://github.com/MatiPl01/eslint-config-react-native-matipl01/issues/84)) ([9021a30](https://github.com/MatiPl01/eslint-config-react-native-matipl01/commit/9021a30de3976e3866bcb2203fab46c1145cb08b))
+
 ## [3.0.1](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v3.0.0...v3.0.1) (2024-04-21)
 
 
