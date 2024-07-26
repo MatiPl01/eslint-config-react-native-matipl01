@@ -2,9 +2,10 @@
 
 exports[`eslint returns correct configuration 1`] = `
 {
+  "language": "@/js",
   "languageOptions": {
     "ecmaVersion": 2018,
-    "parser": "typescript-eslint/parser@7.7.0",
+    "parser": "typescript-eslint/parser@7.17.0",
     "parserOptions": {
       "ecmaFeatures": {
         "jsx": true,
@@ -18,16 +19,16 @@ exports[`eslint returns correct configuration 1`] = `
   },
   "plugins": [
     "@",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@7.7.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@7.17.0",
     "react",
     "import",
-    "perfectionist:eslint-plugin-perfectionist",
-    "markdown:eslint-plugin-markdown@4.0.1",
+    "perfectionist:perfectionist",
+    "markdown:eslint-plugin-markdown@5.1.0",
     "no-relative-import-paths",
-    "prettier:eslint-plugin-prettier@5.1.3",
+    "prettier:eslint-plugin-prettier@5.2.1",
     "react-hooks",
     "react-native",
-    "simple-import-sort:eslint-plugin-simple-import-sort@12.1.0",
+    "simple-import-sort:eslint-plugin-simple-import-sort@12.1.1",
     "unused-imports",
   ],
   "processor": undefined,
@@ -854,16 +855,13 @@ exports[`eslint returns correct configuration 1`] = `
     "perfectionist/sort-array-includes": [
       2,
       {
-        "ignore-case": false,
         "order": "asc",
-        "spread-last": true,
         "type": "natural",
       },
     ],
     "perfectionist/sort-astro-attributes": [
       2,
       {
-        "ignore-case": false,
         "order": "asc",
         "type": "natural",
       },
@@ -887,7 +885,6 @@ exports[`eslint returns correct configuration 1`] = `
           "method",
           "unknown",
         ],
-        "ignore-case": false,
         "order": "asc",
         "type": "natural",
       },
@@ -895,16 +892,13 @@ exports[`eslint returns correct configuration 1`] = `
     "perfectionist/sort-enums": [
       2,
       {
-        "ignore-case": false,
         "order": "asc",
-        "partition-by-comment": false,
         "type": "natural",
       },
     ],
     "perfectionist/sort-exports": [
       0,
       {
-        "ignore-case": false,
         "order": "asc",
         "type": "natural",
       },
@@ -912,36 +906,6 @@ exports[`eslint returns correct configuration 1`] = `
     "perfectionist/sort-imports": [
       0,
       {
-        "custom-groups": {
-          "type": {},
-          "value": {},
-        },
-        "groups": [
-          "type",
-          [
-            "builtin",
-            "external",
-          ],
-          "internal-type",
-          "internal",
-          [
-            "parent-type",
-            "sibling-type",
-            "index-type",
-          ],
-          [
-            "parent",
-            "sibling",
-            "index",
-          ],
-          "object",
-          "unknown",
-        ],
-        "ignore-case": false,
-        "internal-pattern": [
-          "~/**",
-        ],
-        "newlines-between": "always",
         "order": "asc",
         "type": "natural",
       },
@@ -949,18 +913,13 @@ exports[`eslint returns correct configuration 1`] = `
     "perfectionist/sort-interfaces": [
       2,
       {
-        "groups": [],
-        "ignore-case": false,
-        "optionality-order": "ignore",
         "order": "asc",
-        "partition-by-new-line": false,
         "type": "natural",
       },
     ],
     "perfectionist/sort-intersection-types": [
       2,
       {
-        "ignore-case": false,
         "order": "asc",
         "type": "natural",
       },
@@ -968,7 +927,6 @@ exports[`eslint returns correct configuration 1`] = `
     "perfectionist/sort-jsx-props": [
       0,
       {
-        "ignore-case": false,
         "order": "asc",
         "type": "natural",
       },
@@ -976,7 +934,6 @@ exports[`eslint returns correct configuration 1`] = `
     "perfectionist/sort-maps": [
       2,
       {
-        "ignore-case": false,
         "order": "asc",
         "type": "natural",
       },
@@ -984,7 +941,6 @@ exports[`eslint returns correct configuration 1`] = `
     "perfectionist/sort-named-exports": [
       0,
       {
-        "ignore-case": false,
         "order": "asc",
         "type": "natural",
       },
@@ -992,7 +948,6 @@ exports[`eslint returns correct configuration 1`] = `
     "perfectionist/sort-named-imports": [
       0,
       {
-        "ignore-case": false,
         "order": "asc",
         "type": "natural",
       },
@@ -1000,7 +955,6 @@ exports[`eslint returns correct configuration 1`] = `
     "perfectionist/sort-object-types": [
       0,
       {
-        "ignore-case": false,
         "order": "asc",
         "type": "natural",
       },
@@ -1008,18 +962,20 @@ exports[`eslint returns correct configuration 1`] = `
     "perfectionist/sort-objects": [
       2,
       {
-        "ignore-case": false,
         "order": "asc",
-        "partition-by-comment": false,
-        "partition-by-new-line": false,
-        "styled-components": true,
         "type": "natural",
       },
     ],
     "perfectionist/sort-svelte-attributes": [
       2,
       {
-        "ignore-case": false,
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-switch-case": [
+      2,
+      {
         "order": "asc",
         "type": "natural",
       },
@@ -1027,8 +983,13 @@ exports[`eslint returns correct configuration 1`] = `
     "perfectionist/sort-union-types": [
       2,
       {
-        "ignore-case": false,
-        "nullable-last": false,
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-variable-declarations": [
+      2,
+      {
         "order": "asc",
         "type": "natural",
       },
@@ -1036,8 +997,6 @@ exports[`eslint returns correct configuration 1`] = `
     "perfectionist/sort-vue-attributes": [
       2,
       {
-        "groups": [],
-        "ignore-case": false,
         "order": "asc",
         "type": "natural",
       },
@@ -1071,6 +1030,9 @@ exports[`eslint returns correct configuration 1`] = `
       2,
     ],
     "react-native/sort-styles": [
+      2,
+    ],
+    "react/display-name": [
       2,
     ],
     "react/jsx-child-element-spacing": [
@@ -1122,6 +1084,9 @@ exports[`eslint returns correct configuration 1`] = `
     "react/jsx-no-target-blank": [
       2,
     ],
+    "react/jsx-no-undef": [
+      2,
+    ],
     "react/jsx-one-expression-per-line": [
       0,
     ],
@@ -1146,6 +1111,12 @@ exports[`eslint returns correct configuration 1`] = `
     "react/jsx-tag-spacing": [
       0,
     ],
+    "react/jsx-uses-react": [
+      2,
+    ],
+    "react/jsx-uses-vars": [
+      2,
+    ],
     "react/jsx-wrap-multilines": [
       0,
     ],
@@ -1158,6 +1129,9 @@ exports[`eslint returns correct configuration 1`] = `
     "react/no-deprecated": [
       2,
     ],
+    "react/no-direct-mutation-state": [
+      2,
+    ],
     "react/no-find-dom-node": [
       2,
     ],
@@ -1165,6 +1139,9 @@ exports[`eslint returns correct configuration 1`] = `
       2,
     ],
     "react/no-render-return-value": [
+      2,
+    ],
+    "react/no-string-refs": [
       2,
     ],
     "react/no-unescaped-entities": [
@@ -1181,6 +1158,9 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "react/react-in-jsx-scope": [
       0,
+    ],
+    "react/require-render-return": [
+      2,
     ],
     "require-atomic-updates": [
       2,

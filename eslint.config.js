@@ -1,8 +1,8 @@
 import eslintConfigPrettier from 'eslint-config-prettier';
-import perfectionistNatural from 'eslint-plugin-perfectionist/configs/recommended-natural';
+import perfectionist from 'eslint-plugin-perfectionist';
 
 export default [
-  perfectionistNatural,
+  perfectionist.configs['recommended-natural'],
   eslintConfigPrettier,
   {
     ignores: ['.yarn', '.pnp.*', 'CHANGELOG.md']

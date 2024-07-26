@@ -6,8 +6,9 @@ import * as imports from 'eslint-plugin-import';
 import markdown from 'eslint-plugin-markdown';
 // PLUGINS
 import noRelativeImportPaths from 'eslint-plugin-no-relative-import-paths';
-import perfectionistNatural from 'eslint-plugin-perfectionist/configs/recommended-natural';
+import perfectionist from 'eslint-plugin-perfectionist';
 import prettier from 'eslint-plugin-prettier';
+import reactPlugin from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactNative from 'eslint-plugin-react-native';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
@@ -36,21 +37,7 @@ function excludeRules(configs, exclude) {
 export default [
   js.configs.recommended,
   ...ts.configs.recommendedTypeChecked,
-  ...excludeRules(
-    compat.extends('plugin:react/recommended'),
-    // Temporary disable rules that aren't supported by ESLint 9 yet
-    [
-      'react/no-string-refs',
-      'react/display-name',
-      'react/no-direct-mutation-state',
-      'react/prop-types',
-      'react/require-render-return',
-      'react/jsx-no-undef',
-      'react/jsx-uses-react',
-      'react/jsx-uses-vars',
-      'react/react-in-jsx-scope'
-    ]
-  ),
+  reactPlugin.configs.flat.recommended,
   ...excludeRules(
     compat.extends('plugin:import/recommended'),
     // Temporary disable rules that aren't supported by ESLint 9 yet
@@ -58,7 +45,7 @@ export default [
   ),
   imports.configs.typescript,
   imports.configs['react-native'],
-  perfectionistNatural,
+  perfectionist.configs['recommended-natural'],
   ...markdown.configs.recommended,
   eslintConfigPrettier,
   {
