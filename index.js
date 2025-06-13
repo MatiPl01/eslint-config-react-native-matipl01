@@ -131,14 +131,25 @@ const tsRules = {
         ignoreVoid: true,
     }],
     '@typescript-eslint/no-shadow': 'error',
+    "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+            "args": "all",
+            "argsIgnorePattern": "^_",
+            "caughtErrors": "all",
+            "caughtErrorsIgnorePattern": "^_",
+            "destructuredArrayIgnorePattern": "^_",
+            "ignoreRestSiblings": true,
+            "varsIgnorePattern": "^_"
+        }
+    ],
     '@typescript-eslint/prefer-nullish-coalescing': ['error', {
         ignoreConditionalTests: true,
         ignoreMixedLogicalExpressions: true,
-    }],
+    }]
 };
 
 const importRules = {
-    'import/no-unused-modules': ['warn', { unusedExports: true }],
     'no-relative-import-paths/no-relative-import-paths': ['warn', {
         allowSameFolder: true,
         prefix: '@',
@@ -192,6 +203,7 @@ const perfectionistRules = {
     'perfectionist/sort-exports': 'off',
     'perfectionist/sort-imports': 'off',
     'perfectionist/sort-jsx-props': 'off',
+    'perfectionist/sort-modules': 'off',
     'perfectionist/sort-named-exports': 'off',
     'perfectionist/sort-named-imports': 'off',
     'perfectionist/sort-object-types': 'off',
@@ -236,6 +248,22 @@ export default tseslint.config(
             'simple-import-sort': simpleImportSort,
             'unused-imports': unusedImports,
         },
+        settings: {
+            // A workaround for this issue: https://github.com/facebook/react-native/issues/28549
+            'import/ignore': ['react-native'],
+            'import/parsers': {
+                '@typescript-eslint/parser': ['.ts', '.tsx']
+            },
+            'import/resolver': {
+                typescript: {
+                    alwaysTryTypes: true,
+                    project: './tsconfig.json'
+                }
+            },
+            react: {
+                version: 'detect'
+            }
+        }
     },
 
     /* Logically grouped rule overrides */

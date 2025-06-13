@@ -901,6 +901,15 @@ exports[`eslint-config still merges to the same rule set 1`] = `
     ],
     "@typescript-eslint/no-unused-vars": [
       2,
+      {
+        "args": "all",
+        "argsIgnorePattern": "^_",
+        "caughtErrors": "all",
+        "caughtErrorsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_",
+        "ignoreRestSiblings": true,
+        "varsIgnorePattern": "^_",
+      },
     ],
     "@typescript-eslint/no-wrapper-object-types": [
       2,
@@ -1127,12 +1136,6 @@ exports[`eslint-config still merges to the same rule set 1`] = `
     ],
     "import/no-unresolved": [
       2,
-    ],
-    "import/no-unused-modules": [
-      1,
-      {
-        "unusedExports": true,
-      },
     ],
     "indent": [
       0,
@@ -1771,7 +1774,7 @@ exports[`eslint-config still merges to the same rule set 1`] = `
       },
     ],
     "perfectionist/sort-modules": [
-      2,
+      0,
       {
         "order": "asc",
         "type": "natural",
@@ -2278,11 +2281,12 @@ exports[`eslint-config still merges to the same rule set 1`] = `
       "node_modules",
       "node_modules/@types",
     ],
+    "import/ignore": [
+      "react-native",
+    ],
     "import/parsers": {
       "@typescript-eslint/parser": [
         ".ts",
-        ".cts",
-        ".mts",
         ".tsx",
       ],
     },
@@ -2299,6 +2303,13 @@ exports[`eslint-config still merges to the same rule set 1`] = `
           ".cjs",
         ],
       },
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json",
+      },
+    },
+    "react": {
+      "version": "detect",
     },
   },
 }

@@ -5263,7 +5263,7 @@ __metadata:
     eslint-plugin-simple-import-sort: "npm:^12.1.1"
     eslint-plugin-unused-imports: "npm:^4.1.4"
     globals: "npm:^16.2.0"
-    husky: "npm:^9.1.2"
+    husky: "npm:^9.1.7"
     jest: "npm:^29.7.0"
     lint-staged: "npm:^15.2.7"
     prettier: "npm:^3.5.3"
@@ -6588,12 +6588,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^9.1.2":
-  version: 9.1.2
-  resolution: "husky@npm:9.1.2"
+"husky@npm:^9.1.7":
+  version: 9.1.7
+  resolution: "husky@npm:9.1.7"
   bin:
     husky: bin.js
-  checksum: 10c0/7e25c31ef98ac35d357147005d6e5d87db2abca7297e7c5aac931de3699acd32a3f1a9f8e53f101daeab818f0cfe9d18fa7e34f7cf5c9c4437c3665123456dea
+  checksum: 10c0/35bb110a71086c48906aa7cd3ed4913fb913823715359d65e32e0b964cb1e255593b0ae8014a5005c66a68e6fa66c38dcfa8056dbbdfb8b0187c0ffe7ee3a58f
   languageName: node
   linkType: hard
 
