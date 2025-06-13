@@ -1,11 +1,12 @@
 import { ESLint } from 'eslint';
 
-describe('eslint', () => {
-  it('returns correct configuration', async () => {
-    const eslint = new ESLint({
-      overrideConfigFile: './example/eslint.config.js'
-    });
+describe('eslint-config', () => {
+  const eslint = new ESLint({
+    overrideConfigFile: 'index.js',
+  });
 
-    expect(await eslint.calculateConfigForFile('test.tsx')).toMatchSnapshot();
+  it('still merges to the same rule set', async () => {
+    const cfg = await eslint.calculateConfigForFile('dummy.tsx');
+    expect(cfg).toMatchSnapshot();
   });
 });

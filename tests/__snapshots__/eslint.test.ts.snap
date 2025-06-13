@@ -1,16 +1,160 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`eslint returns correct configuration 1`] = `
+exports[`eslint-config still merges to the same rule set 1`] = `
 {
   "language": "@/js",
   "languageOptions": {
-    "ecmaVersion": 2018,
-    "parser": "typescript-eslint/parser@7.17.0",
+    "ecmaVersion": 2025,
+    "globals": {
+      "AbortController": false,
+      "AbortSignal": false,
+      "AggregateError": false,
+      "Array": false,
+      "ArrayBuffer": false,
+      "AsyncDisposableStack": false,
+      "Atomics": false,
+      "BigInt": false,
+      "BigInt64Array": false,
+      "BigUint64Array": false,
+      "Blob": false,
+      "Boolean": false,
+      "BroadcastChannel": false,
+      "Buffer": false,
+      "ByteLengthQueuingStrategy": false,
+      "CloseEvent": false,
+      "CompressionStream": false,
+      "CountQueuingStrategy": false,
+      "Crypto": false,
+      "CryptoKey": false,
+      "CustomEvent": false,
+      "DOMException": false,
+      "DataView": false,
+      "Date": false,
+      "DecompressionStream": false,
+      "DisposableStack": false,
+      "Error": false,
+      "EvalError": false,
+      "Event": false,
+      "EventTarget": false,
+      "File": false,
+      "FinalizationRegistry": false,
+      "Float16Array": false,
+      "Float32Array": false,
+      "Float64Array": false,
+      "FormData": false,
+      "Function": false,
+      "Headers": false,
+      "Infinity": false,
+      "Int16Array": false,
+      "Int32Array": false,
+      "Int8Array": false,
+      "Intl": false,
+      "Iterator": false,
+      "JSON": false,
+      "Map": false,
+      "Math": false,
+      "MessageChannel": false,
+      "MessageEvent": false,
+      "MessagePort": false,
+      "NaN": false,
+      "Navigator": false,
+      "Number": false,
+      "Object": false,
+      "Performance": false,
+      "PerformanceEntry": false,
+      "PerformanceMark": false,
+      "PerformanceMeasure": false,
+      "PerformanceObserver": false,
+      "PerformanceObserverEntryList": false,
+      "PerformanceResourceTiming": false,
+      "Promise": false,
+      "Proxy": false,
+      "RangeError": false,
+      "ReadableByteStreamController": false,
+      "ReadableStream": false,
+      "ReadableStreamBYOBReader": false,
+      "ReadableStreamBYOBRequest": false,
+      "ReadableStreamDefaultController": false,
+      "ReadableStreamDefaultReader": false,
+      "ReferenceError": false,
+      "Reflect": false,
+      "RegExp": false,
+      "Request": false,
+      "Response": false,
+      "Set": false,
+      "SharedArrayBuffer": false,
+      "String": false,
+      "SubtleCrypto": false,
+      "SuppressedError": false,
+      "Symbol": false,
+      "SyntaxError": false,
+      "TextDecoder": false,
+      "TextDecoderStream": false,
+      "TextEncoder": false,
+      "TextEncoderStream": false,
+      "TransformStream": false,
+      "TransformStreamDefaultController": false,
+      "TypeError": false,
+      "URIError": false,
+      "URL": false,
+      "URLPattern": false,
+      "URLSearchParams": false,
+      "Uint16Array": false,
+      "Uint32Array": false,
+      "Uint8Array": false,
+      "Uint8ClampedArray": false,
+      "WeakMap": false,
+      "WeakRef": false,
+      "WeakSet": false,
+      "WebAssembly": false,
+      "WebSocket": false,
+      "WritableStream": false,
+      "WritableStreamDefaultController": false,
+      "WritableStreamDefaultWriter": false,
+      "__dirname": false,
+      "__filename": false,
+      "atob": false,
+      "btoa": false,
+      "clearImmediate": false,
+      "clearInterval": false,
+      "clearTimeout": false,
+      "console": false,
+      "crypto": false,
+      "decodeURI": false,
+      "decodeURIComponent": false,
+      "encodeURI": false,
+      "encodeURIComponent": false,
+      "escape": false,
+      "eval": false,
+      "exports": true,
+      "fetch": false,
+      "global": false,
+      "globalThis": false,
+      "isFinite": false,
+      "isNaN": false,
+      "module": false,
+      "navigator": false,
+      "parseFloat": false,
+      "parseInt": false,
+      "performance": false,
+      "process": false,
+      "queueMicrotask": false,
+      "require": false,
+      "setImmediate": false,
+      "setInterval": false,
+      "setTimeout": false,
+      "structuredClone": false,
+      "undefined": false,
+      "unescape": false,
+    },
+    "parser": "typescript-eslint/parser@8.34.0",
     "parserOptions": {
       "ecmaFeatures": {
         "jsx": true,
       },
-      "project": true,
+      "jsxPragma": null,
+      "projectService": true,
+      "tsconfigRootDir": undefined,
     },
     "sourceType": "module",
   },
@@ -19,17 +163,17 @@ exports[`eslint returns correct configuration 1`] = `
   },
   "plugins": [
     "@",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@7.17.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.34.0",
     "react",
-    "import",
-    "perfectionist:perfectionist",
+    "react-hooks:eslint-plugin-react-hooks",
+    "import:eslint-plugin-import@2.31.0",
+    "perfectionist:eslint-plugin-perfectionist@4.14.0",
     "markdown:eslint-plugin-markdown@5.1.0",
+    "prettier:eslint-plugin-prettier@5.4.1",
     "no-relative-import-paths",
-    "prettier:eslint-plugin-prettier@5.2.1",
-    "react-hooks",
     "react-native",
     "simple-import-sort:eslint-plugin-simple-import-sort@12.1.1",
-    "unused-imports",
+    "unused-imports:unused-imports",
   ],
   "processor": undefined,
   "rules": {
@@ -37,6 +181,546 @@ exports[`eslint returns correct configuration 1`] = `
       0,
     ],
     "@babel/semi": [
+      0,
+    ],
+    "@stylistic/array-bracket-newline": [
+      0,
+    ],
+    "@stylistic/array-bracket-spacing": [
+      0,
+    ],
+    "@stylistic/array-element-newline": [
+      0,
+    ],
+    "@stylistic/arrow-parens": [
+      0,
+    ],
+    "@stylistic/arrow-spacing": [
+      0,
+    ],
+    "@stylistic/block-spacing": [
+      0,
+    ],
+    "@stylistic/brace-style": [
+      0,
+    ],
+    "@stylistic/comma-dangle": [
+      0,
+    ],
+    "@stylistic/comma-spacing": [
+      0,
+    ],
+    "@stylistic/comma-style": [
+      0,
+    ],
+    "@stylistic/computed-property-spacing": [
+      0,
+    ],
+    "@stylistic/dot-location": [
+      0,
+    ],
+    "@stylistic/eol-last": [
+      0,
+    ],
+    "@stylistic/func-call-spacing": [
+      0,
+    ],
+    "@stylistic/function-call-argument-newline": [
+      0,
+    ],
+    "@stylistic/function-call-spacing": [
+      0,
+    ],
+    "@stylistic/function-paren-newline": [
+      0,
+    ],
+    "@stylistic/generator-star-spacing": [
+      0,
+    ],
+    "@stylistic/implicit-arrow-linebreak": [
+      0,
+    ],
+    "@stylistic/indent": [
+      0,
+    ],
+    "@stylistic/indent-binary-ops": [
+      0,
+    ],
+    "@stylistic/js/array-bracket-newline": [
+      0,
+    ],
+    "@stylistic/js/array-bracket-spacing": [
+      0,
+    ],
+    "@stylistic/js/array-element-newline": [
+      0,
+    ],
+    "@stylistic/js/arrow-parens": [
+      0,
+    ],
+    "@stylistic/js/arrow-spacing": [
+      0,
+    ],
+    "@stylistic/js/block-spacing": [
+      0,
+    ],
+    "@stylistic/js/brace-style": [
+      0,
+    ],
+    "@stylistic/js/comma-dangle": [
+      0,
+    ],
+    "@stylistic/js/comma-spacing": [
+      0,
+    ],
+    "@stylistic/js/comma-style": [
+      0,
+    ],
+    "@stylistic/js/computed-property-spacing": [
+      0,
+    ],
+    "@stylistic/js/dot-location": [
+      0,
+    ],
+    "@stylistic/js/eol-last": [
+      0,
+    ],
+    "@stylistic/js/func-call-spacing": [
+      0,
+    ],
+    "@stylistic/js/function-call-argument-newline": [
+      0,
+    ],
+    "@stylistic/js/function-call-spacing": [
+      0,
+    ],
+    "@stylistic/js/function-paren-newline": [
+      0,
+    ],
+    "@stylistic/js/generator-star-spacing": [
+      0,
+    ],
+    "@stylistic/js/implicit-arrow-linebreak": [
+      0,
+    ],
+    "@stylistic/js/indent": [
+      0,
+    ],
+    "@stylistic/js/jsx-quotes": [
+      0,
+    ],
+    "@stylistic/js/key-spacing": [
+      0,
+    ],
+    "@stylistic/js/keyword-spacing": [
+      0,
+    ],
+    "@stylistic/js/linebreak-style": [
+      0,
+    ],
+    "@stylistic/js/lines-around-comment": [
+      0,
+    ],
+    "@stylistic/js/max-len": [
+      0,
+    ],
+    "@stylistic/js/max-statements-per-line": [
+      0,
+    ],
+    "@stylistic/js/multiline-ternary": [
+      0,
+    ],
+    "@stylistic/js/new-parens": [
+      0,
+    ],
+    "@stylistic/js/newline-per-chained-call": [
+      0,
+    ],
+    "@stylistic/js/no-confusing-arrow": [
+      0,
+    ],
+    "@stylistic/js/no-extra-parens": [
+      0,
+    ],
+    "@stylistic/js/no-extra-semi": [
+      0,
+    ],
+    "@stylistic/js/no-floating-decimal": [
+      0,
+    ],
+    "@stylistic/js/no-mixed-operators": [
+      0,
+    ],
+    "@stylistic/js/no-mixed-spaces-and-tabs": [
+      0,
+    ],
+    "@stylistic/js/no-multi-spaces": [
+      0,
+    ],
+    "@stylistic/js/no-multiple-empty-lines": [
+      0,
+    ],
+    "@stylistic/js/no-tabs": [
+      0,
+    ],
+    "@stylistic/js/no-trailing-spaces": [
+      0,
+    ],
+    "@stylistic/js/no-whitespace-before-property": [
+      0,
+    ],
+    "@stylistic/js/nonblock-statement-body-position": [
+      0,
+    ],
+    "@stylistic/js/object-curly-newline": [
+      0,
+    ],
+    "@stylistic/js/object-curly-spacing": [
+      0,
+    ],
+    "@stylistic/js/object-property-newline": [
+      0,
+    ],
+    "@stylistic/js/one-var-declaration-per-line": [
+      0,
+    ],
+    "@stylistic/js/operator-linebreak": [
+      0,
+    ],
+    "@stylistic/js/padded-blocks": [
+      0,
+    ],
+    "@stylistic/js/quote-props": [
+      0,
+    ],
+    "@stylistic/js/quotes": [
+      0,
+    ],
+    "@stylistic/js/rest-spread-spacing": [
+      0,
+    ],
+    "@stylistic/js/semi": [
+      0,
+    ],
+    "@stylistic/js/semi-spacing": [
+      0,
+    ],
+    "@stylistic/js/semi-style": [
+      0,
+    ],
+    "@stylistic/js/space-before-blocks": [
+      0,
+    ],
+    "@stylistic/js/space-before-function-paren": [
+      0,
+    ],
+    "@stylistic/js/space-in-parens": [
+      0,
+    ],
+    "@stylistic/js/space-infix-ops": [
+      0,
+    ],
+    "@stylistic/js/space-unary-ops": [
+      0,
+    ],
+    "@stylistic/js/switch-colon-spacing": [
+      0,
+    ],
+    "@stylistic/js/template-curly-spacing": [
+      0,
+    ],
+    "@stylistic/js/template-tag-spacing": [
+      0,
+    ],
+    "@stylistic/js/wrap-iife": [
+      0,
+    ],
+    "@stylistic/js/wrap-regex": [
+      0,
+    ],
+    "@stylistic/js/yield-star-spacing": [
+      0,
+    ],
+    "@stylistic/jsx-child-element-spacing": [
+      0,
+    ],
+    "@stylistic/jsx-closing-bracket-location": [
+      0,
+    ],
+    "@stylistic/jsx-closing-tag-location": [
+      0,
+    ],
+    "@stylistic/jsx-curly-newline": [
+      0,
+    ],
+    "@stylistic/jsx-curly-spacing": [
+      0,
+    ],
+    "@stylistic/jsx-equals-spacing": [
+      0,
+    ],
+    "@stylistic/jsx-first-prop-new-line": [
+      0,
+    ],
+    "@stylistic/jsx-indent": [
+      0,
+    ],
+    "@stylistic/jsx-indent-props": [
+      0,
+    ],
+    "@stylistic/jsx-max-props-per-line": [
+      0,
+    ],
+    "@stylistic/jsx-newline": [
+      0,
+    ],
+    "@stylistic/jsx-one-expression-per-line": [
+      0,
+    ],
+    "@stylistic/jsx-props-no-multi-spaces": [
+      0,
+    ],
+    "@stylistic/jsx-quotes": [
+      0,
+    ],
+    "@stylistic/jsx-tag-spacing": [
+      0,
+    ],
+    "@stylistic/jsx-wrap-multilines": [
+      0,
+    ],
+    "@stylistic/jsx/jsx-child-element-spacing": [
+      0,
+    ],
+    "@stylistic/jsx/jsx-closing-bracket-location": [
+      0,
+    ],
+    "@stylistic/jsx/jsx-closing-tag-location": [
+      0,
+    ],
+    "@stylistic/jsx/jsx-curly-newline": [
+      0,
+    ],
+    "@stylistic/jsx/jsx-curly-spacing": [
+      0,
+    ],
+    "@stylistic/jsx/jsx-equals-spacing": [
+      0,
+    ],
+    "@stylistic/jsx/jsx-first-prop-new-line": [
+      0,
+    ],
+    "@stylistic/jsx/jsx-indent": [
+      0,
+    ],
+    "@stylistic/jsx/jsx-indent-props": [
+      0,
+    ],
+    "@stylistic/jsx/jsx-max-props-per-line": [
+      0,
+    ],
+    "@stylistic/key-spacing": [
+      0,
+    ],
+    "@stylistic/keyword-spacing": [
+      0,
+    ],
+    "@stylistic/linebreak-style": [
+      0,
+    ],
+    "@stylistic/lines-around-comment": [
+      0,
+    ],
+    "@stylistic/max-len": [
+      0,
+    ],
+    "@stylistic/max-statements-per-line": [
+      0,
+    ],
+    "@stylistic/member-delimiter-style": [
+      0,
+    ],
+    "@stylistic/multiline-ternary": [
+      0,
+    ],
+    "@stylistic/new-parens": [
+      0,
+    ],
+    "@stylistic/newline-per-chained-call": [
+      0,
+    ],
+    "@stylistic/no-confusing-arrow": [
+      0,
+    ],
+    "@stylistic/no-extra-parens": [
+      0,
+    ],
+    "@stylistic/no-extra-semi": [
+      0,
+    ],
+    "@stylistic/no-floating-decimal": [
+      0,
+    ],
+    "@stylistic/no-mixed-operators": [
+      0,
+    ],
+    "@stylistic/no-mixed-spaces-and-tabs": [
+      0,
+    ],
+    "@stylistic/no-multi-spaces": [
+      0,
+    ],
+    "@stylistic/no-multiple-empty-lines": [
+      0,
+    ],
+    "@stylistic/no-tabs": [
+      0,
+    ],
+    "@stylistic/no-trailing-spaces": [
+      0,
+    ],
+    "@stylistic/no-whitespace-before-property": [
+      0,
+    ],
+    "@stylistic/nonblock-statement-body-position": [
+      0,
+    ],
+    "@stylistic/object-curly-newline": [
+      0,
+    ],
+    "@stylistic/object-curly-spacing": [
+      0,
+    ],
+    "@stylistic/object-property-newline": [
+      0,
+    ],
+    "@stylistic/one-var-declaration-per-line": [
+      0,
+    ],
+    "@stylistic/operator-linebreak": [
+      0,
+    ],
+    "@stylistic/padded-blocks": [
+      0,
+    ],
+    "@stylistic/quote-props": [
+      0,
+    ],
+    "@stylistic/quotes": [
+      0,
+    ],
+    "@stylistic/rest-spread-spacing": [
+      0,
+    ],
+    "@stylistic/semi": [
+      0,
+    ],
+    "@stylistic/semi-spacing": [
+      0,
+    ],
+    "@stylistic/semi-style": [
+      0,
+    ],
+    "@stylistic/space-before-blocks": [
+      0,
+    ],
+    "@stylistic/space-before-function-paren": [
+      0,
+    ],
+    "@stylistic/space-in-parens": [
+      0,
+    ],
+    "@stylistic/space-infix-ops": [
+      0,
+    ],
+    "@stylistic/space-unary-ops": [
+      0,
+    ],
+    "@stylistic/switch-colon-spacing": [
+      0,
+    ],
+    "@stylistic/template-curly-spacing": [
+      0,
+    ],
+    "@stylistic/template-tag-spacing": [
+      0,
+    ],
+    "@stylistic/ts/block-spacing": [
+      0,
+    ],
+    "@stylistic/ts/brace-style": [
+      0,
+    ],
+    "@stylistic/ts/comma-dangle": [
+      0,
+    ],
+    "@stylistic/ts/comma-spacing": [
+      0,
+    ],
+    "@stylistic/ts/func-call-spacing": [
+      0,
+    ],
+    "@stylistic/ts/function-call-spacing": [
+      0,
+    ],
+    "@stylistic/ts/indent": [
+      0,
+    ],
+    "@stylistic/ts/key-spacing": [
+      0,
+    ],
+    "@stylistic/ts/keyword-spacing": [
+      0,
+    ],
+    "@stylistic/ts/lines-around-comment": [
+      0,
+    ],
+    "@stylistic/ts/member-delimiter-style": [
+      0,
+    ],
+    "@stylistic/ts/no-extra-parens": [
+      0,
+    ],
+    "@stylistic/ts/no-extra-semi": [
+      0,
+    ],
+    "@stylistic/ts/object-curly-spacing": [
+      0,
+    ],
+    "@stylistic/ts/quotes": [
+      0,
+    ],
+    "@stylistic/ts/semi": [
+      0,
+    ],
+    "@stylistic/ts/space-before-blocks": [
+      0,
+    ],
+    "@stylistic/ts/space-before-function-paren": [
+      0,
+    ],
+    "@stylistic/ts/space-infix-ops": [
+      0,
+    ],
+    "@stylistic/ts/type-annotation-spacing": [
+      0,
+    ],
+    "@stylistic/type-annotation-spacing": [
+      0,
+    ],
+    "@stylistic/type-generic-spacing": [
+      0,
+    ],
+    "@stylistic/type-named-tuple-spacing": [
+      0,
+    ],
+    "@stylistic/wrap-iife": [
+      0,
+    ],
+    "@stylistic/wrap-regex": [
+      0,
+    ],
+    "@stylistic/yield-star-spacing": [
       0,
     ],
     "@typescript-eslint/array-type": [
@@ -49,9 +733,6 @@ exports[`eslint returns correct configuration 1`] = `
       2,
     ],
     "@typescript-eslint/ban-ts-comment": [
-      2,
-    ],
-    "@typescript-eslint/ban-types": [
       2,
     ],
     "@typescript-eslint/block-spacing": [
@@ -113,6 +794,9 @@ exports[`eslint returns correct configuration 1`] = `
     "@typescript-eslint/no-array-constructor": [
       2,
     ],
+    "@typescript-eslint/no-array-delete": [
+      2,
+    ],
     "@typescript-eslint/no-base-to-string": [
       2,
     ],
@@ -120,6 +804,9 @@ exports[`eslint returns correct configuration 1`] = `
       2,
     ],
     "@typescript-eslint/no-duplicate-type-constituents": [
+      2,
+    ],
+    "@typescript-eslint/no-empty-object-type": [
       2,
     ],
     "@typescript-eslint/no-explicit-any": [
@@ -147,9 +834,6 @@ exports[`eslint returns correct configuration 1`] = `
     "@typescript-eslint/no-implied-eval": [
       2,
     ],
-    "@typescript-eslint/no-loss-of-precision": [
-      2,
-    ],
     "@typescript-eslint/no-misused-new": [
       2,
     ],
@@ -163,6 +847,9 @@ exports[`eslint returns correct configuration 1`] = `
       2,
     ],
     "@typescript-eslint/no-redundant-type-constituents": [
+      2,
+    ],
+    "@typescript-eslint/no-require-imports": [
       2,
     ],
     "@typescript-eslint/no-shadow": [
@@ -192,22 +879,51 @@ exports[`eslint returns correct configuration 1`] = `
     "@typescript-eslint/no-unsafe-enum-comparison": [
       2,
     ],
+    "@typescript-eslint/no-unsafe-function-type": [
+      2,
+    ],
     "@typescript-eslint/no-unsafe-member-access": [
       2,
     ],
     "@typescript-eslint/no-unsafe-return": [
       2,
     ],
-    "@typescript-eslint/no-unused-vars": [
+    "@typescript-eslint/no-unsafe-unary-minus": [
       2,
     ],
-    "@typescript-eslint/no-var-requires": [
+    "@typescript-eslint/no-unused-expressions": [
+      2,
+      {
+        "allowShortCircuit": false,
+        "allowTaggedTemplates": false,
+        "allowTernary": false,
+      },
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      2,
+      {
+        "args": "all",
+        "argsIgnorePattern": "^_",
+        "caughtErrors": "all",
+        "caughtErrorsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_",
+        "ignoreRestSiblings": true,
+        "varsIgnorePattern": "^_",
+      },
+    ],
+    "@typescript-eslint/no-wrapper-object-types": [
       2,
     ],
     "@typescript-eslint/object-curly-spacing": [
       0,
     ],
+    "@typescript-eslint/only-throw-error": [
+      2,
+    ],
     "@typescript-eslint/prefer-as-const": [
+      2,
+    ],
+    "@typescript-eslint/prefer-namespace-keyword": [
       2,
     ],
     "@typescript-eslint/prefer-nullish-coalescing": [
@@ -216,6 +932,9 @@ exports[`eslint returns correct configuration 1`] = `
         "ignoreConditionalTests": true,
         "ignoreMixedLogicalExpressions": true,
       },
+    ],
+    "@typescript-eslint/prefer-promise-reject-errors": [
+      2,
     ],
     "@typescript-eslint/quotes": [
       0,
@@ -258,6 +977,10 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "array-element-newline": [
       0,
+    ],
+    "arrow-body-style": [
+      0,
+      "as-needed",
     ],
     "arrow-parens": [
       0,
@@ -311,6 +1034,7 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "curly": [
       0,
+      "all",
     ],
     "dot-location": [
       0,
@@ -404,6 +1128,12 @@ exports[`eslint returns correct configuration 1`] = `
     "import/no-duplicates": [
       1,
     ],
+    "import/no-named-as-default": [
+      1,
+    ],
+    "import/no-named-as-default-member": [
+      1,
+    ],
     "import/no-unresolved": [
       2,
     ],
@@ -427,6 +1157,18 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "lines-around-comment": [
       2,
+      {
+        "afterBlockComment": false,
+        "afterHashbangComment": false,
+        "afterLineComment": false,
+        "allowArrayStart": true,
+        "allowBlockEnd": false,
+        "allowBlockStart": true,
+        "allowClassStart": true,
+        "allowObjectStart": true,
+        "beforeBlockComment": false,
+        "beforeLineComment": false,
+      },
     ],
     "max-len": [
       0,
@@ -442,7 +1184,21 @@ exports[`eslint returns correct configuration 1`] = `
       {
         "capIsNew": true,
         "capIsNewExceptionPattern": "^Gesture\\.",
+        "capIsNewExceptions": [
+          "Array",
+          "Boolean",
+          "Date",
+          "Error",
+          "Function",
+          "Number",
+          "Object",
+          "RegExp",
+          "String",
+          "Symbol",
+          "BigInt",
+        ],
         "newIsCap": true,
+        "newIsCapExceptions": [],
         "properties": true,
       },
     ],
@@ -471,7 +1227,7 @@ exports[`eslint returns correct configuration 1`] = `
       2,
     ],
     "no-class-assign": [
-      2,
+      0,
     ],
     "no-comma-dangle": [
       0,
@@ -481,6 +1237,7 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "no-cond-assign": [
       2,
+      "except-parens",
     ],
     "no-confusing-arrow": [
       0,
@@ -555,6 +1312,9 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "no-empty-pattern": [
       2,
+      {
+        "allowObjectPatternsAsParameters": false,
+      },
     ],
     "no-empty-static-block": [
       2,
@@ -567,6 +1327,9 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "no-extend-native": [
       2,
+      {
+        "exceptions": [],
+      },
     ],
     "no-extra-bind": [
       2,
@@ -599,6 +1362,9 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "no-global-assign": [
       2,
+      {
+        "exceptions": [],
+      },
     ],
     "no-implied-eval": [
       2,
@@ -609,12 +1375,23 @@ exports[`eslint returns correct configuration 1`] = `
     "no-inner-declarations": [
       2,
       "both",
+      {
+        "blockScopedFunctions": "allow",
+      },
     ],
     "no-invalid-regexp": [
       2,
+      {},
     ],
     "no-irregular-whitespace": [
       2,
+      {
+        "skipComments": false,
+        "skipJSXText": false,
+        "skipRegExps": false,
+        "skipStrings": true,
+        "skipTemplates": false,
+      },
     ],
     "no-iterator": [
       2,
@@ -624,6 +1401,10 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "no-labels": [
       2,
+      {
+        "allowLoop": false,
+        "allowSwitch": false,
+      },
     ],
     "no-lone-blocks": [
       2,
@@ -635,7 +1416,7 @@ exports[`eslint returns correct configuration 1`] = `
       2,
     ],
     "no-loss-of-precision": [
-      0,
+      2,
     ],
     "no-misleading-character-class": [
       2,
@@ -681,6 +1462,9 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "no-promise-executor-return": [
       2,
+      {
+        "allowVoid": false,
+      },
     ],
     "no-proto": [
       2,
@@ -717,21 +1501,38 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "no-self-assign": [
       2,
+      {
+        "props": true,
+      },
     ],
     "no-self-compare": [
       2,
     ],
     "no-sequences": [
       2,
+      {
+        "allowInParentheses": true,
+      },
     ],
     "no-setter-return": [
       2,
     ],
     "no-shadow": [
       0,
+      {
+        "allow": [],
+        "builtinGlobals": false,
+        "hoist": "functions",
+        "ignoreFunctionTypeParameterNameValueShadow": true,
+        "ignoreOnInitialization": false,
+        "ignoreTypeValueShadow": true,
+      },
     ],
     "no-shadow-restricted-names": [
       2,
+      {
+        "reportGlobalThis": false,
+      },
     ],
     "no-space-before-semi": [
       0,
@@ -751,17 +1552,34 @@ exports[`eslint returns correct configuration 1`] = `
     "no-this-before-super": [
       0,
     ],
+    "no-throw-literal": [
+      0,
+    ],
     "no-trailing-spaces": [
       0,
     ],
     "no-undef": [
       0,
+      {
+        "typeof": false,
+      },
     ],
     "no-undef-init": [
       2,
     ],
     "no-underscore-dangle": [
       2,
+      {
+        "allow": [],
+        "allowAfterSuper": false,
+        "allowAfterThis": false,
+        "allowAfterThisConstructor": false,
+        "allowFunctionParams": true,
+        "allowInArrayDestructuring": true,
+        "allowInObjectDestructuring": true,
+        "enforceInClassFields": false,
+        "enforceInMethodNames": false,
+      },
     ],
     "no-unexpected-multiline": [
       2,
@@ -782,9 +1600,15 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "no-unsafe-negation": [
       0,
+      {
+        "enforceForOrderingRelations": false,
+      },
     ],
     "no-unsafe-optional-chaining": [
       2,
+      {
+        "disallowArithmeticOperators": false,
+      },
     ],
     "no-unused-expressions": [
       2,
@@ -793,6 +1617,7 @@ exports[`eslint returns correct configuration 1`] = `
         "allowTaggedTemplates": false,
         "allowTernary": true,
         "enforceForJSX": false,
+        "ignoreDirectives": false,
       },
     ],
     "no-unused-labels": [
@@ -812,6 +1637,9 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "no-useless-escape": [
       2,
+      {
+        "allowRegexCharacters": [],
+      },
     ],
     "no-var": [
       2,
@@ -859,13 +1687,6 @@ exports[`eslint returns correct configuration 1`] = `
         "type": "natural",
       },
     ],
-    "perfectionist/sort-astro-attributes": [
-      2,
-      {
-        "order": "asc",
-        "type": "natural",
-      },
-    ],
     "perfectionist/sort-classes": [
       2,
       {
@@ -889,8 +1710,15 @@ exports[`eslint returns correct configuration 1`] = `
         "type": "natural",
       },
     ],
-    "perfectionist/sort-enums": [
+    "perfectionist/sort-decorators": [
       2,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-enums": [
+      0,
       {
         "order": "asc",
         "type": "natural",
@@ -898,6 +1726,13 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "perfectionist/sort-exports": [
       0,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
+    "perfectionist/sort-heritage-clauses": [
+      2,
       {
         "order": "asc",
         "type": "natural",
@@ -938,6 +1773,13 @@ exports[`eslint returns correct configuration 1`] = `
         "type": "natural",
       },
     ],
+    "perfectionist/sort-modules": [
+      0,
+      {
+        "order": "asc",
+        "type": "natural",
+      },
+    ],
     "perfectionist/sort-named-exports": [
       0,
       {
@@ -966,7 +1808,7 @@ exports[`eslint returns correct configuration 1`] = `
         "type": "natural",
       },
     ],
-    "perfectionist/sort-svelte-attributes": [
+    "perfectionist/sort-sets": [
       2,
       {
         "order": "asc",
@@ -994,15 +1836,25 @@ exports[`eslint returns correct configuration 1`] = `
         "type": "natural",
       },
     ],
-    "perfectionist/sort-vue-attributes": [
-      2,
+    "prefer-arrow-callback": [
+      0,
       {
-        "order": "asc",
-        "type": "natural",
+        "allowNamedFunctions": false,
+        "allowUnboundThis": true,
       },
     ],
     "prefer-const": [
       2,
+      {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false,
+      },
+    ],
+    "prefer-promise-reject-errors": [
+      0,
+      {
+        "allowEmptyReject": false,
+      },
     ],
     "prefer-rest-params": [
       2,
@@ -1027,6 +1879,9 @@ exports[`eslint returns correct configuration 1`] = `
       2,
     ],
     "react-hooks/rules-of-hooks": [
+      2,
+    ],
+    "react-native/no-unused-styles": [
       2,
     ],
     "react-native/sort-styles": [
@@ -1112,7 +1967,7 @@ exports[`eslint returns correct configuration 1`] = `
       0,
     ],
     "react/jsx-uses-react": [
-      2,
+      0,
     ],
     "react/jsx-uses-vars": [
       2,
@@ -1164,6 +2019,9 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "require-atomic-updates": [
       2,
+      {
+        "allowProperties": false,
+      },
     ],
     "require-await": [
       2,
@@ -1270,6 +2128,10 @@ exports[`eslint returns correct configuration 1`] = `
     ],
     "use-isnan": [
       2,
+      {
+        "enforceForIndexOf": false,
+        "enforceForSwitchCase": true,
+      },
     ],
     "valid-typeof": [
       2,
@@ -1412,10 +2274,15 @@ exports[`eslint returns correct configuration 1`] = `
       ".tsx",
       ".js",
       ".jsx",
+      ".mjs",
+      ".cjs",
     ],
     "import/external-module-folders": [
       "node_modules",
       "node_modules/@types",
+    ],
+    "import/ignore": [
+      "react-native",
     ],
     "import/parsers": {
       "@typescript-eslint/parser": [
@@ -1426,10 +2293,14 @@ exports[`eslint returns correct configuration 1`] = `
     "import/resolver": {
       "node": {
         "extensions": [
+          ".ts",
+          ".cts",
+          ".mts",
+          ".tsx",
           ".js",
-          ".web.js",
-          ".ios.js",
-          ".android.js",
+          ".jsx",
+          ".mjs",
+          ".cjs",
         ],
       },
       "typescript": {
