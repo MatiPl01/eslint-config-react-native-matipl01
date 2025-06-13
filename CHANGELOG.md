@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v3.1.0...v3.2.0) (2025-06-13)
+
+
+### Features
+
+* Add full eslint v9 support ([#165](https://github.com/MatiPl01/eslint-config-react-native-matipl01/issues/165)) ([6d82e24](https://github.com/MatiPl01/eslint-config-react-native-matipl01/commit/6d82e242058cd4c5a3be9c4032e3e5c9a45bfb1d))
+
 # [3.1.0](https://github.com/MatiPl01/eslint-config-react-native-matipl01/compare/v3.0.2...v3.1.0) (2024-07-26)
 
 
